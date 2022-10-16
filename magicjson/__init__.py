@@ -49,6 +49,7 @@ class MagicJson:
             return [self._deserialze(item) for item in any]
         if isinstance(any, dict):
             return {k:self._deserialze(v) for k,v in any.items()}
+        return any
 
 
     def deserialize(self, any: Any):

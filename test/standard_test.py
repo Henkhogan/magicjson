@@ -14,7 +14,10 @@ class StandardTestCase(TestCase):
         validation_dict = {
             'date': date(2000,1,1),
             'datetime': datetime(2010,11,12,13,14,15),
-            'time': time(20,21,22)
+            'time': time(20,21,22),
+            'str': 'anyString',
+            'int': 100,
+            'none': None
         }
 
         serialized = mj.serialize(validation_dict)
