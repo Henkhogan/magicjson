@@ -52,6 +52,7 @@ class MagicJson:
         return any
 
 
-    def deserialize(self, any: Any):
-        _json = loads(any)
-        return self._deserialze(_json)
+    def deserialize(self, any: str | bytes | bytearray| Any):
+        if isinstance(any, (str, bytes, bytearray)):
+            return self._deserialze(loads(any))
+        return self._deserialze(any)
